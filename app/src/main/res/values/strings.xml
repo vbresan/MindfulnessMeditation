@@ -27,7 +27,7 @@
 
     <string name="BalloonStreak">Meditate every day to build your streak.</string>
     <string name="BalloonKarma">Meditate more to build your karma.</string>
-    <string name="NoInternet">Can\'t connect to internet, please re-try later.</string>
+    <string name="NoInternet">Can\'t connect to internet, please try again later.</string>
 
     <string name="Credits1">Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the <a href="https://www.bangor.ac.uk/mindfulness/">Centre for Mindfulness Research &amp; Practice at Bangor University</a>.</string>
 
