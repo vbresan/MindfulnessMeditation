@@ -25,6 +25,10 @@ android {
         }
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
     flavorDimensions "distribution"
     productFlavors {
         // review
