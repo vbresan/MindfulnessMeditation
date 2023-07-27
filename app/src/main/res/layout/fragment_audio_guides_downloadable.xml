@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNoDownloadable"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAlignment="center"
+            android:text="@string/NoDownloadable"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutYesDownloadable"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <CheckBox
+            android:id="@+id/checkboxSelectAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select all"
+        />
+
+        <ListView
+            android:id="@+id/listViewDownloadable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TotalSelected"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:paddingEnd="5dp"
+            />
+
+            <TextView
+                android:id="@+id/textViewTotalSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonStartDownload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/StartDownload"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

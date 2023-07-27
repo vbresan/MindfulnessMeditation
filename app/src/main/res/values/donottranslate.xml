@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url_meditations_list">https://raw.githubusercontent.com/binary-solutions/mindfulness-meditation/main/meditations.csv</string>
+    <string name="extra_key_meditation">biz.binarysolutions.mindfulnessmeditation.EXTRA.Meditation</string>
+
+    <string name="achievements_file_name">biz.binarysolutions.mindfulnessmeditation_achievements</string>
+
+    <string name="preferences_key_storage">preferences_key_storage</string>
+    <string name="preferences_key_streak_date">preferences_key_streak_date</string>
+    <string name="preferences_key_streak_count">preferences_key_streak_count</string>
+    <string name="preferences_key_karma_seconds">preferences_key_karma_count</string>
+    <string name="preferences_key_karma_timestamp">preferences_key_karma_timestamp</string>
+</resources>

@@ -1,0 +1,5 @@
+2.1.1 (2022.09.15)
+
+* adding meditation streak
+* adding credits
+* adding in-app reviews

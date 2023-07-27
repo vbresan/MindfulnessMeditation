@@ -1,0 +1,5 @@
+2.0 (2022.03.24)
+
+* UI improvements
+* external storage support
+* adding practice journal

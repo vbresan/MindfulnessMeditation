@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_audio_guides"
+        android:icon="@drawable/ic_queue_music_black_24dp"
+        android:title="@string/AudioGuides"
+    />
+
+    <item
+        android:id="@+id/navigation_practice_journal"
+        android:icon="@drawable/ic_date_range_black_24dp"
+        android:title="@string/PracticeJournal"
+    />
+
+    <!--
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_fact_check_black_24dp"
+        android:title="@string/Schedule" />
+    -->
+</menu>

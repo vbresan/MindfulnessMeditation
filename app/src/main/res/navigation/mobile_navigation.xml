@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_audio_guides"
+    >
+
+    <fragment
+        android:id="@+id/navigation_audio_guides"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ParentFragment"
+        android:label="@string/AudioGuides"
+        tools:layout="@layout/fragment_audio_guides"
+    />
+
+    <fragment
+        android:id="@+id/navigation_practice_journal"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.practicejournal.ParentFragment"
+        android:label="@string/PracticeJournal"
+        tools:layout="@layout/fragment_practice_journal"
+    />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.notifications.NotificationsFragment"
+        android:label="@string/Schedule"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>

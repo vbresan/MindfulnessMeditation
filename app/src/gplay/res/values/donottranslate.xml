@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="review_request_file_name">biz.binarysolutions.mindfulnessmeditation_review_request</string>
+    <string name="preferences_key_review_request_timestamp">preferences_key_review_request_timestamp</string>
+</resources>

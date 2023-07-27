@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Mindfulness Meditation</string>
+
+    <string name="AudioGuides">Audio Guides</string>
+    <string name="PracticeJournal">Practice Journal</string>
+    <string name="Schedule">Schedule</string>
+
+    <string name="OnDevice">On Device</string>
+    <string name="Downloadable">Downloadable</string>
+
+    <string name="NoOnDevice">Currently there are no audio guides available on the device.</string>
+    <string name="NoDownloadable">Currently there are no new audio guides available for download.</string>
+
+    <string name="Subtitle">%1$s · Duration: %2$s · Size: %3$dMB</string>
+    <string name="SubtitleNoAuthor">Duration: %1$s · Size: %2$dMB</string>
+    <string name="TotalSelected">Total Selected [MB]:</string>
+    <string name="StartDownload">Start Download</string>
+    <string name="DownloadingPleaseWait">Downloading, please wait …</string>
+    <string name="Total">Total</string>
+
+    <string name="ConfirmDelete">Are you sure you want to delete selected meditation?</string>
+
+    <string name="Credits">Credits</string>
+    <string name="Preferences">Preferences</string>
+    <string name="SaveOnExternal">Save audio guides on external storage</string>
+    <string name="MovingPleaseWait">Moving, please wait …</string>
+
+    <string name="BalloonStreak">Meditate every day to build your streak.</string>
+    <string name="BalloonKarma">Meditate more to build your karma.</string>
+    <string name="NoInternet">Can\'t connect to internet, please re-try later.</string>
+
+    <string name="Credits1">Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the <a href="https://www.bangor.ac.uk/mindfulness/">Centre for Mindfulness Research &amp; Practice at Bangor University</a>.</string>
+
+    <string name="ContentDescriptionKarmaIcon">Karma icon</string>
+    <string name="ContentDescriptionStreakIcon">Streak icon</string>
+
+</resources>
