@@ -2,6 +2,7 @@ package biz.binarysolutions.mindfulnessmeditation.ui.audioguides;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -35,15 +35,16 @@ public class ParentFragment extends Fragment
      */
     private void addFragmentsToContainer() {
 
-        FragmentActivity activity = getActivity();
-        if (activity == null) {
-            return;
+        FragmentManager     fm = getChildFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        if (!onDeviceFragment.isAdded()) {
+            ft.add(R.id.fragmentContainer, onDeviceFragment);
+        }
+        if (!downloadableFragment.isAdded()) {
+            ft.add(R.id.fragmentContainer, downloadableFragment);
         }
 
-        FragmentManager     fm = activity.getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.fragmentContainer, onDeviceFragment);
-        ft.add(R.id.fragmentContainer, downloadableFragment);
         ft.commit();
     }
 
@@ -56,17 +57,18 @@ public class ParentFragment extends Fragment
         Context context = getContext();
         if (context == null) {
             tabLayout.selectTab(tabLayout.getTabAt(1));
+            return;
         }
 
         final MeditationDao dao =
             MeditationDatabase.getDatabase(context).meditationDao();
 
-        MeditationDatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                int count = dao.getAllOnDeviceCount();
-                tabLayout.selectTab(tabLayout.getTabAt(count > 0? 0 : 1));
-            }
+        MeditationDatabase.databaseWriteExecutor.execute(() -> {
+
+            int count = dao.getAllOnDeviceCount();
+            new Handler(context.getMainLooper()).post(() ->
+                tabLayout.selectTab(tabLayout.getTabAt(count > 0? 0 : 1))
+            );
         });
     }
 
@@ -106,14 +108,9 @@ public class ParentFragment extends Fragment
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
 
-        FragmentActivity activity = getActivity();
-        if (activity == null) {
-            return;
-        }
-
         int position = tab.getPosition();
 
-        FragmentManager     fm = activity.getSupportFragmentManager();
+        FragmentManager     fm = getChildFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.hide(position == 0 ? downloadableFragment : onDeviceFragment);
         ft.show(position == 0 ? onDeviceFragment     : downloadableFragment);
@@ -122,7 +119,7 @@ public class ParentFragment extends Fragment
 
     @Override
     public void onTabReselected(TabLayout.Tab tab) {
-        // do nothing
+        onTabSelected(tab);
     }
 
     @Override
