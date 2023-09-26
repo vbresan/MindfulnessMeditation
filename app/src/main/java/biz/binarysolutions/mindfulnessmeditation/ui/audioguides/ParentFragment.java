@@ -114,7 +114,7 @@ public class ParentFragment extends Fragment
         FragmentTransaction ft = fm.beginTransaction();
         ft.hide(position == 0 ? downloadableFragment : onDeviceFragment);
         ft.show(position == 0 ? onDeviceFragment     : downloadableFragment);
-        ft.commit();
+        ft.commitAllowingStateLoss();
     }
 
     @Override
