@@ -80,7 +80,25 @@ public class ParentFragment extends Fragment
             ft.remove(downloadableFragment);
         }
 
-        ft.commit();
+        ft.commitAllowingStateLoss();
+    }
+
+    /**
+     *
+     */
+    private void selectDefaultTab() {
+
+        View view = getView();
+        if (view == null) {
+            return;
+        }
+
+        TabLayout tabLayout = view.findViewById(R.id.tabLayout);
+        if (tabLayout == null) {
+            return;
+        }
+
+        selectDefaultTab(tabLayout);
     }
 
     /**
@@ -115,18 +133,6 @@ public class ParentFragment extends Fragment
         downloadableFragment = new DownloadableFragment();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        addFragmentsToContainer();
-    }
-
-    @Override
-    public void onPause() {
-        removeFragmentsFromContainer();
-        super.onPause();
-    }
-
     /**
      *
      * @param inflater
@@ -148,6 +154,19 @@ public class ParentFragment extends Fragment
         selectDefaultTab(tabLayout);
 
         return root;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        addFragmentsToContainer();
+        selectDefaultTab();
+    }
+
+    @Override
+    public void onStop() {
+        removeFragmentsFromContainer();
+        super.onStop();
     }
 
     @Override
