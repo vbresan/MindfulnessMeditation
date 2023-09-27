@@ -1,5 +1,7 @@
 package biz.binarysolutions.mindfulnessmeditation.ui.audioguides;
 
+import static androidx.lifecycle.Lifecycle.State.RESUMED;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -32,6 +35,20 @@ public class ParentFragment extends Fragment
 
     /**
      *
+     * @return
+     */
+    private boolean isActivityResumed() {
+
+        FragmentActivity activity = getActivity();
+        if (activity == null) {
+            return false;
+        }
+
+        return activity.getLifecycle().getCurrentState().isAtLeast(RESUMED);
+    }
+
+    /**
+     *
      */
     private void addFragmentsToContainer() {
 
@@ -43,6 +60,24 @@ public class ParentFragment extends Fragment
         }
         if (!downloadableFragment.isAdded()) {
             ft.add(R.id.fragmentContainer, downloadableFragment);
+        }
+
+        ft.commit();
+    }
+
+    /**
+     *
+     */
+    private void removeFragmentsFromContainer() {
+
+        FragmentManager     fm = getChildFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        if (onDeviceFragment.isAdded()) {
+            ft.remove(onDeviceFragment);
+        }
+        if (downloadableFragment.isAdded()) {
+            ft.remove(downloadableFragment);
         }
 
         ft.commit();
@@ -80,6 +115,18 @@ public class ParentFragment extends Fragment
         downloadableFragment = new DownloadableFragment();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        addFragmentsToContainer();
+    }
+
+    @Override
+    public void onPause() {
+        removeFragmentsFromContainer();
+        super.onPause();
+    }
+
     /**
      *
      * @param inflater
@@ -96,8 +143,6 @@ public class ParentFragment extends Fragment
 
         View root = inflater.inflate(R.layout.fragment_audio_guides, container, false);
 
-        addFragmentsToContainer();
-
         TabLayout tabLayout = root.findViewById(R.id.tabLayout);
         tabLayout.addOnTabSelectedListener(this);
         selectDefaultTab(tabLayout);
@@ -108,13 +153,17 @@ public class ParentFragment extends Fragment
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
 
+        if (!isActivityResumed()) {
+            return;
+        }
+
         int position = tab.getPosition();
 
         FragmentManager     fm = getChildFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.hide(position == 0 ? downloadableFragment : onDeviceFragment);
         ft.show(position == 0 ? onDeviceFragment     : downloadableFragment);
-        ft.commitAllowingStateLoss();
+        ft.commit();
     }
 
     @Override

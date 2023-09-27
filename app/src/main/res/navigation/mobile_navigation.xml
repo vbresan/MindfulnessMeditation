@@ -21,9 +21,4 @@
         tools:layout="@layout/fragment_practice_journal"
     />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="biz.binarysolutions.mindfulnessmeditation.ui.notifications.NotificationsFragment"
-        android:label="@string/Schedule"
-        tools:layout="@layout/fragment_notifications" />
 </navigation>

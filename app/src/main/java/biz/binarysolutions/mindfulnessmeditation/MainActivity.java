@@ -2,6 +2,7 @@ package biz.binarysolutions.mindfulnessmeditation;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,9 +14,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -162,38 +163,91 @@ public class MainActivity extends AppCompatActivity
         return meditations;
     }
 
+    /**
+     *
+     * @param fragmentId
+     * @return
+     */
+    private NavController getNavController(int fragmentId) {
+
+        FragmentManager fm       = getSupportFragmentManager();
+        NavHostFragment fragment =
+            (NavHostFragment) fm.findFragmentById(fragmentId);
+
+        if (fragment == null) {
+            return null;
+        }
+
+        return fragment.getNavController();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("================= onCreate");
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration =
-            new AppBarConfiguration.Builder(
-                R.id.navigation_audio_guides,
-                R.id.navigation_practice_journal,
-                R.id.navigation_notifications
-            ).build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupWithNavController(navView, navController);
 
         addOnClickListenerStreak();
         addOnClickListenerKarma();
         fetchMeditationsList();
+
+        BottomNavigationView view = findViewById(R.id.nav_view);
+        NavController controller  = getNavController(R.id.nav_host_fragment);
+
+        if (controller != null) {
+            NavigationUI.setupWithNavController(view, controller);
+        }
+
+        if (savedInstanceState == null) {
+            System.out.println("================= creation");
+        } else {
+            System.out.println("================= recreation");
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
+        System.out.println("================= onResume");
+
         displayStreak();
         displayKarma();
     }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+    /*
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        System.out.println("================= Configuration changed!");
+
+        FragmentManager fm       = getSupportFragmentManager();
+        Fragment        fragment = fm.findFragmentById(R.id.fragmentContainer);
+
+        if (fragment == null) {
+            return;
+        }
+
+        fm.beginTransaction().detach(fragment).commit();
+        fm.beginTransaction().attach(fragment).commit();
+
+    }
+    */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -229,12 +283,9 @@ public class MainActivity extends AppCompatActivity
         final MeditationDao dao =
             MeditationDatabase.getDatabase(this).meditationDao();
 
-        MeditationDatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                dao.refreshMeditationsList(meditations);
-            }
-        });
+        MeditationDatabase.databaseWriteExecutor.execute(
+            () -> dao.refreshMeditationsList(meditations)
+        );
     }
 
     @Override
