@@ -1,6 +1,7 @@
 package biz.binarysolutions.mindfulnessmeditation;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -105,10 +106,13 @@ public class MainActivity extends AppCompatActivity
 
             runOnUiThread(() -> {
 
+                Resources resources = getResources();
                 if (streak.isUpdatedToday()) {
-                    imageView.setImageResource(R.drawable.ic_launcher_foreground);
+                    imageView.setImageResource(R.drawable.ic_streak_active);
+                    textView.setTextColor(resources.getColor(R.color.colorAccent));
                 } else {
-                    imageView.setImageResource(R.drawable.ic_launcher_foreground_grayscale);
+                    imageView.setImageResource(R.drawable.ic_streak_inactive);
+                    textView.setTextColor(resources.getColor(R.color.colorPrimaryDark));
                 }
 
                 textView.setText(String.valueOf(streak.getCount()));
@@ -126,12 +130,29 @@ public class MainActivity extends AppCompatActivity
             return;
         }
 
+        ImageView imageView = findViewById(R.id.imageViewKarma);
+        if (imageView == null) {
+            return;
+        }
+
         new Thread(() -> {
 
             Karma  karma = Karma.get(MainActivity.this);
-            String text  = String.valueOf(karma.getCount());
+            int    count = karma.getCount();
+            String text  = String.valueOf(count);
 
-            runOnUiThread(() -> textView.setText(text));
+            runOnUiThread(() -> {
+
+                if (count > 0 ) {
+
+                    imageView.setImageResource(R.drawable.ic_karma_active);
+
+                    Resources resources = getResources();
+                    int       color     = resources.getColor(R.color.colorAccent);
+                    textView.setTextColor(color);
+                    textView.setText(text);
+                }
+            });
         }).start();
     }
 

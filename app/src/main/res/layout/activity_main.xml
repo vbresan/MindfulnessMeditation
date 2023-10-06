@@ -36,11 +36,11 @@
 
                 <ImageView
                     android:id="@+id/imageViewStreak"
-                    android:layout_width="56dp"
+                    android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/ic_launcher_foreground_grayscale"
+                    app:srcCompat="@drawable/ic_streak_inactive"
                     android:contentDescription="@string/ContentDescriptionStreakIcon"
                 />
 
@@ -51,15 +51,16 @@
                     android:layout_gravity="center"
                     android:text="0"
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/oregano_regular"
                     android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
                     tools:ignore="HardcodedText,RtlSymmetry"
                 />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="14dp"
+                android:layout_width="30dp"
                 android:layout_height="match_parent"
             />
 
@@ -71,11 +72,12 @@
                 >
 
                 <ImageView
-                    android:layout_width="56dp"
+                    android:id="@+id/imageViewKarma"
+                    android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/tibetan_knot"
+                    app:srcCompat="@drawable/ic_karma_inactive"
                     android:contentDescription="@string/ContentDescriptionKarmaIcon"
                 />
 
@@ -86,8 +88,9 @@
                     android:layout_gravity="center"
                     android:text="0"
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/oregano_regular"
                     android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
                     tools:ignore="HardcodedText"
                 />
 
@@ -100,10 +103,9 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/mobile_navigation"
         android:layout_weight="1"
-    />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
