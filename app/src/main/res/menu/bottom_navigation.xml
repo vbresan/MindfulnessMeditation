@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_audio_guides"
-        android:icon="@drawable/ic_queue_music_black_24dp"
+        android:id="@+id/navigation_meditations"
+        android:icon="@drawable/queue_music_24dp"
         android:title="@string/Meditations"
     />
 
     <item
-        android:id="@+id/navigation_practice_journal"
-        android:icon="@drawable/ic_date_range_black_24dp"
+        android:id="@+id/navigation_journal"
+        android:icon="@drawable/date_range_24dp"
         android:title="@string/Journal"
     />
 
-    <!--
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_fact_check_black_24dp"
-        android:title="@string/Schedule" />
-    -->
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings_24dp"
+        android:title="@string/Settings"
+    />
+
 </menu>

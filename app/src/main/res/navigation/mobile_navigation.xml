@@ -4,18 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_audio_guides"
+    app:startDestination="@+id/navigation_meditations"
     >
 
     <fragment
-        android:id="@+id/navigation_audio_guides"
+        android:id="@+id/navigation_meditations"
         android:name="biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ParentFragment"
         android:label="@string/Meditations"
         tools:layout="@layout/fragment_audio_guides"
     />
 
     <fragment
-        android:id="@+id/navigation_practice_journal"
+        android:id="@+id/navigation_journal"
         android:name="biz.binarysolutions.mindfulnessmeditation.ui.practicejournal.ParentFragment"
         android:label="@string/Journal"
         tools:layout="@layout/fragment_practice_journal"

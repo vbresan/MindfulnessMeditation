@@ -59,10 +59,10 @@ public class PlayerActivity extends Activity
 
         if (player.isPlaying()) {
             player.pause();
-            setPlayIcon(R.drawable.ic_play_arrow_black_24dp);
+            setPlayIcon(R.drawable.play_arrow_24dp);
         } else {
             player.start();
-            setPlayIcon(R.drawable.ic_pause_black_24dp);
+            setPlayIcon(R.drawable.pause_24dp);
         }
     }
 
@@ -147,7 +147,7 @@ public class PlayerActivity extends Activity
             seekBar.setEnabled(false);
         }
 
-        setPlayIcon(R.drawable.ic_pause_black_24dp);
+        setPlayIcon(R.drawable.pause_24dp);
         setPlayerButtonListeners();
     }
 

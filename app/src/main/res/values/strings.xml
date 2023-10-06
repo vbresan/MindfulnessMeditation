@@ -3,6 +3,8 @@
 
     <string name="Meditations">Meditations</string>
     <string name="Journal">Journal</string>
+    <string name="Settings">Settings</string>
+
     <string name="Schedule">Schedule</string>
 
     <string name="OnDevice">On Device</string>
