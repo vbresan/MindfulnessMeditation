@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Mindfulness Meditation</string>
 
-    <string name="AudioGuides">Audio Guides</string>
-    <string name="PracticeJournal">Practice Journal</string>
+    <string name="Meditations">Meditations</string>
+    <string name="Journal">Journal</string>
     <string name="Schedule">Schedule</string>
 
     <string name="OnDevice">On Device</string>

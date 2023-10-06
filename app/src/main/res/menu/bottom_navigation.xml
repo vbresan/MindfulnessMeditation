@@ -4,13 +4,13 @@
     <item
         android:id="@+id/navigation_audio_guides"
         android:icon="@drawable/ic_queue_music_black_24dp"
-        android:title="@string/AudioGuides"
+        android:title="@string/Meditations"
     />
 
     <item
         android:id="@+id/navigation_practice_journal"
         android:icon="@drawable/ic_date_range_black_24dp"
-        android:title="@string/PracticeJournal"
+        android:title="@string/Journal"
     />
 
     <!--

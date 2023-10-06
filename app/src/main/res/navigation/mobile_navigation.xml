@@ -10,14 +10,14 @@
     <fragment
         android:id="@+id/navigation_audio_guides"
         android:name="biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ParentFragment"
-        android:label="@string/AudioGuides"
+        android:label="@string/Meditations"
         tools:layout="@layout/fragment_audio_guides"
     />
 
     <fragment
         android:id="@+id/navigation_practice_journal"
         android:name="biz.binarysolutions.mindfulnessmeditation.ui.practicejournal.ParentFragment"
-        android:label="@string/PracticeJournal"
+        android:label="@string/Journal"
         tools:layout="@layout/fragment_practice_journal"
     />
 
