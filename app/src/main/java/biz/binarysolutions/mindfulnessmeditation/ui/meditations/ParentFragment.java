@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations;
 
 import static androidx.lifecycle.Lifecycle.State.RESUMED;
 
@@ -21,8 +21,8 @@ import com.google.android.material.tabs.TabLayout;
 import biz.binarysolutions.mindfulnessmeditation.R;
 import biz.binarysolutions.mindfulnessmeditation.data.MeditationDao;
 import biz.binarysolutions.mindfulnessmeditation.data.MeditationDatabase;
-import biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable.DownloadableFragment;
-import biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ondevice.OnDeviceFragment;
+import biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable.DownloadableFragment;
+import biz.binarysolutions.mindfulnessmeditation.ui.meditations.ondevice.OnDeviceFragment;
 
 /**
  *
@@ -147,7 +147,7 @@ public class ParentFragment extends Fragment
             Bundle                  savedInstanceState
         ) {
 
-        View root = inflater.inflate(R.layout.fragment_audio_guides, container, false);
+        View root = inflater.inflate(R.layout.fragment_meditations, container, false);
 
         TabLayout tabLayout = root.findViewById(R.id.tabLayout);
         tabLayout.addOnTabSelectedListener(this);

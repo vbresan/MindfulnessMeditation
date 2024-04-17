@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.audioguides.ondevice.PlayerActivity"
+            android:name=".ui.meditations.ondevice.PlayerActivity"
             android:screenOrientation="portrait"
         />
         <activity android:name=".Credits" />

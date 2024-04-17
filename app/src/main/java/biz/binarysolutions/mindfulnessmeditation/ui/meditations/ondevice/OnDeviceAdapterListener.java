@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ondevice;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.ondevice;
 
 import biz.binarysolutions.mindfulnessmeditation.data.Meditation;
 

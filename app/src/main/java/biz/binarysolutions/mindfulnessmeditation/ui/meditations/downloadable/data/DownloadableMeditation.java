@@ -1,8 +1,8 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable.data;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable.data;
 
 import biz.binarysolutions.mindfulnessmeditation.data.Meditation;
-import biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable.TotalChangeListener;
-import biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable.Util;
+import biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable.TotalChangeListener;
+import biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable.Util;
 
 /**
  *

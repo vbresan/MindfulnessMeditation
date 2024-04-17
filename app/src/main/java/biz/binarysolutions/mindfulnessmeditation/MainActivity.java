@@ -1,17 +1,12 @@
 package biz.binarysolutions.mindfulnessmeditation;
 
-import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
@@ -227,33 +222,6 @@ public class MainActivity extends AppCompatActivity
 
         displayStreak();
         displayKarma();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.action_bar, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-        if (id == R.id.menuItemPreferences) {
-
-            Intent intent = new Intent(this, Preferences.class);
-            startActivity(intent);
-            return true;
-        } else if (id == R.id.menuItemCredits) {
-
-            Intent intent = new Intent(this, Credits.class);
-            startActivity(intent);
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
     }
 
     @Override

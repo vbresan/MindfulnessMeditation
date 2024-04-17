@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable;
 
 /**
  *

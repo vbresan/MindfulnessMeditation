@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ondevice;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.ondevice;
 
 import android.content.Context;
 import android.content.Intent;
@@ -98,7 +98,7 @@ public class OnDeviceFragment extends Fragment
             Bundle         savedInstanceState
         ) {
 
-        root = inflater.inflate(R.layout.fragment_audio_guides_ondevice, container, false);
+        root = inflater.inflate(R.layout.fragment_meditations_ondevice, container, false);
 
         Context context = getContext();
         if (context != null) {

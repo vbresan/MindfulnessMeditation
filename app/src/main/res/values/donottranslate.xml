@@ -5,6 +5,9 @@
 
     <string name="achievements_file_name">biz.binarysolutions.mindfulnessmeditation_achievements</string>
 
+    <string name="more_key_credits">more_key_credits</string>
+    <string name="more_key_preferences">more_key_preferences</string>
+
     <string name="preferences_key_storage">preferences_key_storage</string>
     <string name="preferences_key_streak_date">preferences_key_streak_date</string>
     <string name="preferences_key_streak_count">preferences_key_streak_count</string>

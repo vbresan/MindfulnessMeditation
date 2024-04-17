@@ -9,16 +9,22 @@
 
     <fragment
         android:id="@+id/navigation_meditations"
-        android:name="biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ParentFragment"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.meditations.ParentFragment"
         android:label="@string/Meditations"
-        tools:layout="@layout/fragment_audio_guides"
+        tools:layout="@layout/fragment_meditations"
     />
 
     <fragment
         android:id="@+id/navigation_journal"
-        android:name="biz.binarysolutions.mindfulnessmeditation.ui.practicejournal.ParentFragment"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.journal.ParentFragment"
         android:label="@string/Journal"
         tools:layout="@layout/fragment_practice_journal"
+    />
+
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.more.ParentFragment"
+        android:label="@string/More"
     />
 
 </navigation>

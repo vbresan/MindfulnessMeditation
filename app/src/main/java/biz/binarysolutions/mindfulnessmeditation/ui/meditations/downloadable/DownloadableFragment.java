@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +19,7 @@ import java.util.List;
 import biz.binarysolutions.mindfulnessmeditation.R;
 import biz.binarysolutions.mindfulnessmeditation.data.Meditation;
 import biz.binarysolutions.mindfulnessmeditation.data.MeditationDatabase;
-import biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable.data.DownloadableMeditation;
+import biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable.data.DownloadableMeditation;
 
 /**
  *
@@ -116,7 +116,7 @@ public class DownloadableFragment extends Fragment
         ) {
 
         root = inflater.inflate(
-            R.layout.fragment_audio_guides_downloadable, container, false);
+            R.layout.fragment_meditations_downloadable, container, false);
 
         adapter = new DownloadableAdapter(
             getContext(), R.layout.list_item_downloadable);

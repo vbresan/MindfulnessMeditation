@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ondevice;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.ondevice;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 
 import biz.binarysolutions.mindfulnessmeditation.R;
 import biz.binarysolutions.mindfulnessmeditation.data.Meditation;
-import biz.binarysolutions.mindfulnessmeditation.ui.audioguides.downloadable.Util;
+import biz.binarysolutions.mindfulnessmeditation.ui.meditations.downloadable.Util;
 
 /**
  *

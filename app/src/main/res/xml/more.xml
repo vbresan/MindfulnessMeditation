@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <PreferenceCategory>
+
+        <Preference
+            android:key="@string/more_key_credits"
+            android:title="Credits"
+            app:iconSpaceReserved="false"
+        />
+
+        <Preference
+            android:key="@string/more_key_preferences"
+            android:title="Preferences"
+            app:iconSpaceReserved="false"
+        />
+
+    </PreferenceCategory>
+</PreferenceScreen>

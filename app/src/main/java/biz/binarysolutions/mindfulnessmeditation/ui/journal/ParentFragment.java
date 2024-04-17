@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.practicejournal;
+package biz.binarysolutions.mindfulnessmeditation.ui.journal;
 
 import android.content.Context;
 import android.os.Bundle;

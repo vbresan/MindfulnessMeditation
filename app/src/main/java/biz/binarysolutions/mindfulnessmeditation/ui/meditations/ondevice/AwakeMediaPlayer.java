@@ -1,4 +1,4 @@
-package biz.binarysolutions.mindfulnessmeditation.ui.audioguides.ondevice;
+package biz.binarysolutions.mindfulnessmeditation.ui.meditations.ondevice;
 
 import android.content.Context;
 import android.media.MediaPlayer;
