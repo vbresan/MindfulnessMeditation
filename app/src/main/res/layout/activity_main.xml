@@ -54,13 +54,14 @@
                     android:fontFamily="@font/oregano_regular"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
+                    android:padding="6dp"
                     tools:ignore="HardcodedText,RtlSymmetry"
                 />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="30dp"
+                android:layout_width="24dp"
                 android:layout_height="match_parent"
             />
 
