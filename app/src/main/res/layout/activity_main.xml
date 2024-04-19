@@ -45,7 +45,6 @@
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/ic_streak"
-                    app:tint="@color/primaryDark"
                     android:contentDescription="@string/ContentDescriptionStreakIcon"
                 />
 
@@ -84,7 +83,6 @@
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/ic_karma"
-                    app:tint="@color/primaryDark"
                     android:contentDescription="@string/ContentDescriptionKarmaIcon"
                 />
 
