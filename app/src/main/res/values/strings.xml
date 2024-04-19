@@ -33,7 +33,10 @@
 
     <string name="Credits1">Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the <a href="https://www.bangor.ac.uk/mindfulness/">Centre for Mindfulness Research &amp; Practice at Bangor University</a>.</string>
 
-    <string name="ContentDescriptionKarmaIcon">Karma icon</string>
-    <string name="ContentDescriptionStreakIcon">Streak icon</string>
+    <!-- Content descriptions for accessibility -->
+    <string name="KarmaIcon">Karma icon</string>
+    <string name="StreakIcon">Streak icon</string>
+    <string name="ButtonPlayOrPause">Button play or pause</string>
+    <string name="ButtonStop">Button stop</string>
 
 </resources>

@@ -45,7 +45,7 @@
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/ic_streak"
-                    android:contentDescription="@string/ContentDescriptionStreakIcon"
+                    android:contentDescription="@string/StreakIcon"
                 />
 
                 <TextView
@@ -83,7 +83,7 @@
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/ic_karma"
-                    android:contentDescription="@string/ContentDescriptionKarmaIcon"
+                    android:contentDescription="@string/KarmaIcon"
                 />
 
                 <TextView

@@ -1,74 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linearLayoutPlayer"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="bottom|center_horizontal"
-    android:orientation="vertical"
-    android:padding="5dp"
-    android:background="@drawable/player_background"
     >
 
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textViewAuthor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <SeekBar
-        android:id="@+id/seekBarProgress"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:src="@drawable/player_background"
+        android:scaleType="centerCrop"
+        android:importantForAccessibility="no"
+    />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_gravity="bottom"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
 
         <TextView
-            android:id="@+id/textViewFromStart"
+            android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="15dp" />
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/accent"
+        />
 
         <TextView
-            android:id="@+id/textViewToEnd"
+            android:id="@+id/textViewAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/accent"
+        />
+
+        <SeekBar
+            android:id="@+id/seekBarProgress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:paddingEnd="15dp" />
+            android:thumbTint="@color/accent"
+            android:progressTint="@color/accent"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewFromStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:textColor="@color/accent"
+                tools:ignore="RtlSymmetry"
+            />
+
+            <TextView
+                android:id="@+id/textViewToEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingEnd="15dp"
+                android:textColor="@color/accent"
+                tools:ignore="RtlSymmetry"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/imageButtonPlayOrPause"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_button"
+                android:src="@drawable/pause_24dp"
+                android:contentDescription="@string/ButtonPlayOrPause"
+            />
+
+            <ImageButton
+                android:id="@+id/imageButtonStop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_button"
+                android:src="@drawable/stop_24dp"
+                android:contentDescription="@string/ButtonStop"
+            />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButtonPlayOrPause"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/rounded_button"
-            android:src="@drawable/pause_24dp" />
-
-        <ImageButton
-            android:id="@+id/imageButtonStop"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/rounded_button"
-            android:src="@drawable/stop_24dp" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>
