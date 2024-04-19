@@ -3,8 +3,10 @@ package biz.binarysolutions.mindfulnessmeditation.ui.meditations.ondevice;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.PowerManager;
 import android.view.View;
 import android.widget.ImageButton;
@@ -32,7 +34,7 @@ public class PlayerActivity extends Activity
         MediaPlayer.OnPreparedListener {
 
     private AwakeMediaPlayer player;
-    private Handler          handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     private String meditationId;
 
@@ -255,14 +257,28 @@ public class PlayerActivity extends Activity
         return pm.isInteractive();
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
+    @SuppressWarnings("deprecation")
+    private Meditation getMeditation(String key) {
+
+        if (Build.VERSION.SDK_INT >= 33) {
+            return getIntent().getSerializableExtra(key, Meditation.class);
+        } else {
+            return (Meditation) getIntent().getSerializableExtra(key);
+        }
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
         String key = getString(R.string.extra_key_meditation);
-        Meditation meditation = (Meditation)
-            getIntent().getSerializableExtra(key);
+        Meditation meditation = getMeditation(key);
 
         if (meditation == null) {
             finish();
