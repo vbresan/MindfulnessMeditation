@@ -1,6 +1,5 @@
 package biz.binarysolutions.mindfulnessmeditation;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -101,15 +100,15 @@ public class MainActivity extends AppCompatActivity
 
             runOnUiThread(() -> {
 
-                Resources resources = getResources();
+                int color;
                 if (streak.isUpdatedToday()) {
-                    imageView.setImageResource(R.drawable.ic_streak_active);
-                    textView.setTextColor(resources.getColor(R.color.colorAccent));
+                    color = getResources().getColor(R.color.accent);
                 } else {
-                    imageView.setImageResource(R.drawable.ic_streak_inactive);
-                    textView.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                    color = getResources().getColor(R.color.primaryDark);
                 }
 
+                imageView.setColorFilter(color);
+                textView.setTextColor(color);
                 textView.setText(String.valueOf(streak.getCount()));
             });
         }).start();
@@ -140,11 +139,10 @@ public class MainActivity extends AppCompatActivity
 
                 if (count > 0 ) {
 
-                    imageView.setImageResource(R.drawable.ic_karma_active);
+                    int accentColor = getResources().getColor(R.color.accent);
 
-                    Resources resources = getResources();
-                    int       color     = resources.getColor(R.color.colorAccent);
-                    textView.setTextColor(color);
+                    imageView.setColorFilter(accentColor);
+                    textView.setTextColor(accentColor);
                     textView.setText(text);
                 }
             });
