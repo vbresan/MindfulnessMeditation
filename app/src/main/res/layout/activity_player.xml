@@ -81,6 +81,10 @@
             android:orientation="horizontal"
             >
 
+            <!--
+                Use android:tint instead of app:tint. app:tint does not work.
+            -->
+
             <ImageButton
                 android:id="@+id/imageButtonPlayOrPause"
                 android:layout_width="48dp"
@@ -88,6 +92,8 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/rounded_button"
                 android:src="@drawable/pause_24dp"
+                android:tint="@color/primaryDark"
+                tools:ignore="UseAppTint"
                 android:contentDescription="@string/ButtonPlayOrPause"
             />
 
@@ -98,6 +104,8 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/rounded_button"
                 android:src="@drawable/stop_24dp"
+                android:tint="@color/primaryDark"
+                tools:ignore="UseAppTint"
                 android:contentDescription="@string/ButtonStop"
             />
 
