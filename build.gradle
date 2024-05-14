@@ -3,9 +3,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url 'https://android-sdk.is.com/'
-        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:8.2.2"
@@ -16,9 +13,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url 'https://android-sdk.is.com/'
-        }
     }
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile).tap {
