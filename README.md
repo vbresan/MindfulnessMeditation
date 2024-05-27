@@ -15,6 +15,9 @@ Meditations are provided by and shared with permission of Dr. Rebecca Crane, Dir
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="80">](https://f-droid.org/packages/biz.binarysolutions.mindfulnessmeditation/)
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
+     alt="Get it on IzzyOnDroid"
+     height="80">](https://apt.izzysoft.de/fdroid/index/apk/biz.binarysolutions.mindfulnessmeditation)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
      height="80">](https://play.google.com/store/apps/details?id=biz.binarysolutions.mindfulnessmeditation)
