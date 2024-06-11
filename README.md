@@ -18,8 +18,9 @@ Meditations are provided by and shared with permission of Dr. Rebecca Crane, Dir
 [<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
      alt="Get it on IzzyOnDroid"
      height="80">](https://apt.izzysoft.de/fdroid/index/apk/biz.binarysolutions.mindfulnessmeditation)
+[<img src="https://raw.githubusercontent.com/andOTP/andOTP/master/assets/badges/get-it-on-github.png"
+     alt="Get it on GitHub"
+     height="80">](https://github.com/vbresan/MindfulnessMeditation/releases/latest)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
      height="80">](https://play.google.com/store/apps/details?id=biz.binarysolutions.mindfulnessmeditation)
-
-Or get the APK from the [Releases Section](https://github.com/vbresan/MindfulnessMeditation/releases/latest).
