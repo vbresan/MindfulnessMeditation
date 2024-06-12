@@ -1,6 +1,6 @@
 # Mindfulness Meditation
 
-An android ap with various audio guides for mindfulness meditation:
+An android app with various audio guides for mindfulness meditation:
 
 * Body Scan
 * Breath & Body
