@@ -6,8 +6,8 @@ _Selection of audio guides for mindfulness meditations._
 <p float="center">
   <img src="https://github.com/vbresan/MindfulnessMeditation/blob/master/metadata/en-US/images/phoneScreenshots/1.png" width="20%" alt="Screenshot downloadable meditations" title="Screenshot downloadable meditations" />
   <img src="https://github.com/vbresan/MindfulnessMeditation/blob/master/metadata/en-US/images/phoneScreenshots/2.png" width="20%" alt="Screenshot downloading meditations" title="Screenshot downloading meditations" />
-  <img src="https://github.com/vbresan/MindfulnessMeditation/blob/master/metadata/en-US/images/phoneScreenshots/4.png" width="20%" alt="Screenshot on-device meditations" title="Screenshot on-device meditations" />
-  <img src="https://github.com/vbresan/MindfulnessMeditation/blob/master/metadata/en-US/images/phoneScreenshots/3.png" width="20%" alt="Screenshot meditation player" title="Screenshot meditation player" />
+  <img src="https://github.com/vbresan/MindfulnessMeditation/blob/master/metadata/en-US/images/phoneScreenshots/3.png" width="20%" alt="Screenshot on-device meditations" title="Screenshot on-device meditations" />
+  <img src="https://github.com/vbresan/MindfulnessMeditation/blob/master/metadata/en-US/images/phoneScreenshots/4.png" width="20%" alt="Screenshot meditation player" title="Screenshot meditation player" />
 </p>
 
 ## About
