@@ -1,7 +1,7 @@
-apply plugin: 'com.android.application'
+apply plugin: "com.android.application"
 
 android {
-    compileSdk 34
+    compileSdk 35
     namespace "biz.binarysolutions.mindfulnessmeditation"
 
     compileOptions {
@@ -12,9 +12,9 @@ android {
     defaultConfig {
         applicationId "biz.binarysolutions.mindfulnessmeditation"
         minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 5
-        versionName "2.3"
+        targetSdkVersion 35
+        versionCode 6
+        versionName "2.3.1"
 
         setProperty("archivesBaseName", "$applicationId-$versionName")
     }
@@ -22,7 +22,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
 
@@ -51,22 +51,20 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation 'com.google.android.material:material:1.11.0'
+    implementation "com.google.android.material:material:1.12.0"
 
-    implementation 'androidx.navigation:navigation-fragment:2.7.7'
-    implementation 'androidx.navigation:navigation-ui:2.7.7'
+    implementation "androidx.navigation:navigation-fragment:2.9.1"
+    implementation "androidx.navigation:navigation-ui:2.9.1"
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.3.2'
-    implementation 'androidx.preference:preference:1.2.1'
+    implementation "androidx.appcompat:appcompat:1.7.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.preference:preference:1.2.1"
 
-    def room_version = "2.6.1"
+    def room_version = "2.7.2"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
 
-    gplayImplementation 'com.google.android.play:review:2.0.1'
+    gplayImplementation "com.google.android.play:review:2.0.2"
 }
