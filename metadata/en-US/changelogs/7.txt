@@ -1,0 +1,4 @@
+2.3.2 (2025.07.09)
+
+* adding Support fragment
+

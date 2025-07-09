@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_meditations"
+        android:icon="@drawable/queue_music_24dp"
+        android:title="@string/Meditations"
+    />
+
+    <item
+        android:id="@+id/navigation_journal"
+        android:icon="@drawable/date_range_24dp"
+        android:title="@string/Journal"
+    />
+
+    <item
+        android:id="@+id/navigation_support"
+        android:icon="@drawable/volunteer_activism_24dp"
+        android:title="@string/Support"
+    />
+
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/menu_24dp"
+        android:title="@string/More"
+    />
+
+</menu>

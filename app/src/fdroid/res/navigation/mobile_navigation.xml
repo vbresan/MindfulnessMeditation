@@ -18,6 +18,13 @@
         android:id="@+id/navigation_journal"
         android:name="biz.binarysolutions.mindfulnessmeditation.ui.journal.ParentFragment"
         android:label="@string/Journal"
+        tools:layout="@layout/fragment_practice_journal"
+    />
+
+    <fragment
+        android:id="@+id/navigation_support"
+        android:name="biz.binarysolutions.mindfulnessmeditation.ui.support.ParentFragment"
+        android:label="@string/Support"
         tools:layout="@layout/fragment_support"
     />
 

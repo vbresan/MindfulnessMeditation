@@ -13,8 +13,8 @@ android {
         applicationId "biz.binarysolutions.mindfulnessmeditation"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 6
-        versionName "2.3.1"
+        versionCode 7
+        versionName "2.3.2"
 
         setProperty("archivesBaseName", "$applicationId-$versionName")
     }
@@ -32,12 +32,17 @@ android {
 
     flavorDimensions = ["distribution"]
     productFlavors {
-        // review
         gplay {
+            // includes app review library
             dimension "distribution"
         }
         fdroid {
             dimension "distribution"
+
+            dependenciesInfo {
+                includeInApk = false
+                includeInBundle = false
+            }
         }
     }
 
