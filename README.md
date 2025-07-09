@@ -22,7 +22,7 @@ An android app with various audio guides for mindfulness meditation:
 * Sitting Meditation (open)
 * 30 minute silent sitting, with bells
 
-Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the Centre for Mindfulness Research & Practice at Bangor University.
+Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the [Centre for Mindfulness Research & Practice at Bangor University](https://www.bangor.ac.uk/centre-for-mindfulness).
 
 ## Get it on ...
 

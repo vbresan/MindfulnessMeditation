@@ -31,7 +31,7 @@
     <string name="BalloonKarma">Meditate more to build your karma.</string>
     <string name="NoInternet">Can\'t connect to internet, please try again later.</string>
 
-    <string name="Credits1">Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the <a href="https://www.bangor.ac.uk/mindfulness/">Centre for Mindfulness Research &amp; Practice at Bangor University</a>.</string>
+    <string name="Credits1">Meditations are provided by and shared with permission of Dr. Rebecca Crane, Director of the <a href="https://www.bangor.ac.uk/centre-for-mindfulness">Centre for Mindfulness Research &amp; Practice at Bangor University</a>.</string>
 
     <!-- Content descriptions for accessibility -->
     <string name="KarmaIcon">Karma icon</string>
