@@ -58,7 +58,7 @@
                 android:id="@+id/textViewFromStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="15dp"
+                android:paddingStart="16dp"
                 android:textColor="@color/accent"
                 tools:ignore="RtlSymmetry"
             />
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:paddingEnd="15dp"
+                android:paddingEnd="16dp"
                 android:textColor="@color/accent"
                 tools:ignore="RtlSymmetry"
             />
